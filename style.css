@@ -28,6 +28,14 @@ html {
   a{
     text-decoration: none;
   }
+
+  input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
 /* CSS Reset ends */
 
 
@@ -74,6 +82,7 @@ header{
             display: inline-flex;
             gap: 20px;
             padding-block: 8px;
+            padding-block-end: 20px;
             align-items: center;
             justify-content: flex-start;
             color: #3E3E3E;
@@ -122,7 +131,7 @@ header{
           position: absolute;
           inset: auto;
           right: clamp(1.25rem, -2.083rem + 2.778vw, 1.25rem);
-          bottom: 5px;
+          bottom: 18px;
         }
 
         .nav-items.donate svg{
@@ -235,6 +244,7 @@ main{
     }
     .product-wrapper{
       padding: 48px 32px;
+      padding-block-end: 65px;
       width: 100%;
       max-width: 950px;
       margin-inline: auto;
@@ -338,14 +348,22 @@ main{
             font-size: 16px;
             color: #3E3E3E;
             max-width: 250px;
+
             
           }
+          .product-size span{
+            border-width:1px;
+            border-style:solid;
+            border-color: currentColor;
+          }
+
           .product-size span:first-child{
             margin-inline-end: 20px;
+            border: 0;
           }
           .product-size span:not(:first-child){
             cursor: pointer;
-            border: 1px solid #a3a3a3;
+            /* border: 1px solid #a3a3a3; */
             padding: 12px 24px;
             border-radius: 50px;
           }
@@ -362,10 +380,69 @@ main{
           flex-direction: row;
           flex-wrap: wrap;
           align-content: center;
+            form{
+              display: flex;
+              width: 100%;
+              max-width: 100px;
+              font-weight: 600;
+            }
+            .value-button{
+              width: 32px;
+              height: 32px;
+              display: flex;
+              padding: 14px 10px;
+              border: 1px solid;
+              border-radius: 50px;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+            }
+            input[type="number"]{
+              width: 37px;
+              font-weight: 600;
+              text-align: center;
+              outline: 0;
+              border: 0;
+            }
+
           a.add-to-cart{
+            width: 100%;
+            max-width: 220px;
+            padding-block: 16px;
+            background-color: #fff;
+            color: #FF9E6B;
+            border:1px solid currentColor;
+            font-size: 18px;
+            font-weight: 400;
+            text-align: center;
+            border-radius: 100px;
+            transition: background-color .2s ease;
+          }
+          a.add-to-cart:hover,
+          a.add-to-cart.active{
+            color:#fff;
             background-color: #FF9E6B;
-            color: #fff;
           }
         }
+    }
+    .cart-wrapper{
+      padding-block-start: 50px;
+      padding-block-end: 65px;
+      padding-inline: 32px;
+
+      .cart-title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+      }
+      .order-type span.btns{
+        color: #3E3E3E;
+        /* font-weight: 300; */
+        border: 1px solid #a3a3a3;
+        border-radius: 100px;
+      }
+
     }
 }
