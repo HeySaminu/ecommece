@@ -24,7 +24,7 @@
                     <li class="nav-items donate"><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: currentColor;transform: ;msFilter:;"><path d="M20.205 4.791a5.938 5.938 0 0 0-4.209-1.754A5.906 5.906 0 0 0 12 4.595a5.904 5.904 0 0 0-3.996-1.558 5.942 5.942 0 0 0-4.213 1.758c-2.353 2.363-2.352 6.059.002 8.412L12 21.414l8.207-8.207c2.354-2.353 2.355-6.049-.002-8.416z"></path></svg>Donate to Shelter</a></li>
                 </ul>
         
-                <ul class="nav">
+                <ul class="nav logout">
                     <li class="nav-items"><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: currentColor;transform: ;msFilter:;"><path d="M16 13v-2H7V8l-5 4 5 4v-3z"></path><path d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"></path></svg>Log out</a></li>
                 </ul>
             </nav>
@@ -57,11 +57,31 @@
                         <div class="card--inner-wrapper">
                             <img src="assets/coffee_cup.png" width="130" height="180" alt="Coffee product thumbnail" class="product-image">
                             <div class="product-details">
+                                <div name>
+                                    <h3 class="product-name">Capucino</h3> <span class="product-price">$4.98</span>
+                                </div>
+                                <p class="product-description">The combination of coffee, milk, and palm sugar makes this drink have a delicous</p>
+                                <div class="product-size"><span>Size</span><span selected>Small</span><span>Large</span></div>
+                            </div>
+                        </div>
+                        <div class="add-to-cart-wrapper">
+                            <form>
+                                <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                                <input type="number" id="number" value="0" />
+                                <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                              </form>
+                            <a href="" class="add-to-cart">Add to Cart</a>
+                            </div>
+                    </div>
+                    <div class="card">
+                        <div class="card--inner-wrapper">
+                            <img src="assets/coffee_cup.png" width="130" height="180" alt="Coffee product thumbnail" class="product-image">
+                            <div class="product-details">
                                 <div>
                                     <h3 class="product-name">Capucino</h3> <span class="product-price">$4.98</span>
                                 </div>
                                 <p class="product-description">The combination of coffee, milk, and palm sugar makes this drink have a delicous</p>
-                                <div class="product-size"><span>Size</span><span>Small</span><span>Large</span></div>
+                                <div class="product-size"><span>Size</span><span selected>Small</span><span>Large</span></div>
                             </div>
                         </div>
                         <span class="add-to-cart-wrapper">
